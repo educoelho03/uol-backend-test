@@ -30,8 +30,8 @@ public class CodinameService {
         this.env = environment;
     }
 
-    private List<String> avengersCodinameList = new ArrayList<>();
-    private List<String> justiceLeagueCodinameList = new ArrayList<>();
+    private final List<String> avengersCodinameList = new ArrayList<>();
+    private final List<String> justiceLeagueCodinameList = new ArrayList<>();
     ObjectMapper objectMapper = new ObjectMapper();
 
 

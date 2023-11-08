@@ -28,13 +28,10 @@ public class PlayerController {
         return new ResponseEntity<>(newPlayer, HttpStatus.CREATED);
     }
 
-
-    // TODO: GET PLAYERS BY GROUPTYPE
-
     @GetMapping
     public ResponseEntity<List<Player>> getAllPlayers(){
         try {
-            List<Player> players = playerService.getAll();
+            List<Player> players = playerService.getAllPlayers();
             return ResponseEntity.ok(players);
         } catch (Exception e){
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();

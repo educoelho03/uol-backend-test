@@ -22,6 +22,8 @@ public class PlayerService {
 
     public Player create(PlayerDTO playerDTO) {
         Player newPlayer = new Player(playerDTO);
+        String codiname = getCodiname(playerDTO.groupType());
+        newPlayer.setCodiname(codiname);
         return playerRepository.save(newPlayer);
     }
 
@@ -30,6 +32,11 @@ public class PlayerService {
     }
 
     private String getCodiname(GroupType groupType){
+        return codinameHandler.findCodiname(groupType);
 
+    }
+
+    public List<Player> getAllPlayers() {
+        return playerRepository.findAll();
     }
 }
