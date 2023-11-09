@@ -9,7 +9,7 @@ import org.springframework.web.reactive.function.client.WebClient;
 @Configuration
 public class AppConfig {
 
-    @Value("${avengers}")
+    @Value("${avengers}") // nesse caso eu tenho duas URLs como eu poderia fazer?
     private String addressBaseUrl;
 
     @Bean
