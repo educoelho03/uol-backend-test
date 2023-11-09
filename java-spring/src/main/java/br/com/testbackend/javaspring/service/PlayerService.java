@@ -27,9 +27,6 @@ public class PlayerService {
         return playerRepository.save(newPlayer);
     }
 
-    public List<Player> getAll(){
-        return playerRepository.findAll();
-    }
 
     private String getCodiname(GroupType groupType){
         return codinameHandler.findCodiname(groupType);

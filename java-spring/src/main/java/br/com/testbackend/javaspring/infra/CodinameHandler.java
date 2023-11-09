@@ -9,6 +9,9 @@ public class CodinameHandler {
 
     private CodinameService codinameService;
 
+    public CodinameHandler(CodinameService codinameService) {
+        this.codinameService = codinameService;
+    }
 
     public String findCodiname(GroupType groupType){
         if(groupType == GroupType.AVENGERS){
